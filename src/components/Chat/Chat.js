@@ -11,8 +11,14 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
-} from "@material-ui/core";
-import { IoSend, IoMic, IoCopy, IoClose, IoTrash } from "react-icons/io5";
+} from "@mui/material";
+import {
+  Send as SendIcon,
+  Mic as MicIcon,
+  CopyAll as CopyIcon,
+  Close as CloseIcon,
+  Delete as DeleteIcon,
+} from "@mui/icons-material";
 import { GoLaw } from "react-icons/go";
 import ReactMarkdown from "react-markdown";
 import { CopyToClipboard } from "react-copy-to-clipboard";
@@ -240,7 +246,7 @@ const Chat = () => {
               </div>
               <CopyToClipboard text={message.content}>
                 <IconButton size="small" className="chat-copy-button">
-                  <IoCopy />
+                  <CopyIcon />
                 </IconButton>
               </CopyToClipboard>
             </div>
@@ -274,7 +280,7 @@ const Chat = () => {
           onClick={handleVoiceInput}
           className={`chat-voice-button ${isListening ? "listening" : ""}`}
         >
-          {isListening ? <IoClose /> : <IoMic />}
+          {isListening ? <CloseIcon /> : <MicIcon />}
         </IconButton>
         <input
           accept="*"
@@ -294,10 +300,10 @@ const Chat = () => {
           type="submit"
           disabled={isSending || (!inputValue && !file)}
         >
-          {isSending ? <CircularProgress size={24} /> : <IoSend />}
+          {isSending ? <CircularProgress size={24} /> : <SendIcon />}
         </Button>
         <IconButton onClick={handleClearChat} className="clear-chat-button">
-          <IoTrash />
+          <DeleteIcon />
         </IconButton>
       </form>
     </div>
