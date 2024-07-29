@@ -4,15 +4,15 @@ import { MdMenu } from "react-icons/md";
 import "./Sidebar.css";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  // const [isDarkMode, setIsDarkMode] = useState(false);
 
-  useEffect(() => {
-    if (isDarkMode) {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
-  }, [isDarkMode]);
+  // useEffect(() => {
+  //   if (isDarkMode) {
+  //     document.body.classList.add("dark-mode");
+  //   } else {
+  //     document.body.classList.remove("dark-mode");
+  //   }
+  // }, [isDarkMode]);
 
   // const toggleDarkMode = () => {
   //   setIsDarkMode(!isDarkMode);
