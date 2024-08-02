@@ -7,7 +7,7 @@ export const API_URL = "https://azuretest-sn.azurewebsites.net";
  */
 export const getAIResponse = async (question) => {
   try {
-    const response = await fetch(`${API_URL}/api/get-link-response`, {
+    const response = await fetch(`${API_URL}/api/get-response`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

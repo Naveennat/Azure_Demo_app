@@ -14,9 +14,9 @@ import {
 } from "@mui/material";
 import {
   Send as SendIcon,
-  Mic as MicIcon,
+  // Mic as MicIcon,
   CopyAll as CopyIcon,
-  Close as CloseIcon,
+  // Close as CloseIcon,
   Delete as DeleteIcon,
 } from "@mui/icons-material";
 import { GoLaw } from "react-icons/go";
@@ -31,7 +31,7 @@ const Chat = () => {
   const [isSending, setIsSending] = useState(false);
   const [error, setError] = useState(null);
   const [isTyping, setIsTyping] = useState(false);
-  const [isListening, setIsListening] = useState(false);
+  // const [isListening, setIsListening] = useState(false);
   const [file, setFile] = useState(null);
   const [disclaimerOpen, setDisclaimerOpen] = useState(true);
   const inputRef = useRef(null);
@@ -113,7 +113,7 @@ const Chat = () => {
       recognitionRef.current.onresult = (event) => {
         const speechToText = event.results[0][0].transcript;
         setInputValue(speechToText);
-        setIsListening(false);
+        // setIsListening(false);
 
         // Automatically trigger the handleSubmit function
         handleSubmit();
@@ -121,7 +121,7 @@ const Chat = () => {
 
       recognitionRef.current.onerror = (event) => {
         console.error("Speech recognition error:", event.error);
-        setIsListening(false);
+        // setIsListening(false);
       };
     }
   }, [handleSubmit]);
@@ -136,19 +136,19 @@ const Chat = () => {
     setInputValue(event.target.value);
   };
 
-  const handleVoiceInput = () => {
-    if (recognitionRef.current) {
-      if (isListening) {
-        recognitionRef.current.stop();
-        setIsListening(false);
-      } else {
-        recognitionRef.current.start();
-        setIsListening(true);
-      }
-    } else {
-      console.warn("Web Speech API is not supported in this browser.");
-    }
-  };
+  // const handleVoiceInput = () => {
+  //   if (recognitionRef.current) {
+  //     if (isListening) {
+  //       recognitionRef.current.stop();
+  //       setIsListening(false);
+  //     } else {
+  //       recognitionRef.current.start();
+  //       setIsListening(true);
+  //     }
+  //   } else {
+  //     console.warn("Web Speech API is not supported in this browser.");
+  //   }
+  // };
 
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
@@ -180,10 +180,10 @@ const Chat = () => {
         <DialogTitle>Disclaimer</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            By using this chat application, you agree to the terms and
-            conditions. The information provided is for general informational
-            purposes only and is not a substitute for professional doctor
-            advice.
+            By using this chat application, you agree to our terms and
+            conditions. The information provided is intended for general
+            informational purposes only and should not be considered a
+            substitute for professional medical advice.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -276,12 +276,12 @@ const Chat = () => {
           disabled={isSending}
           inputRef={inputRef}
         />
-        <IconButton
+        {/* <IconButton
           onClick={handleVoiceInput}
           className={`chat-voice-button ${isListening ? "listening" : ""}`}
         >
           {isListening ? <CloseIcon /> : <MicIcon />}
-        </IconButton>
+        </IconButton> */}
         <input
           accept="*"
           className="chat-file-input"
