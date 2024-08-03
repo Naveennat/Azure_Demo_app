@@ -215,7 +215,7 @@ const Chat = () => {
                 src={
                   message.role === "user"
                     ? "https://test.digitalt3.com/wp-content/uploads/2024/06/legal_chat2.png"
-                    : "https://test.digitalt3.com/wp-content/uploads/2024/06/legal_exp.png"
+                    : "https://i.ibb.co/v132Tm5/Medi-ai-icon.png"
                 }
                 alt={message.role}
                 width="40"
