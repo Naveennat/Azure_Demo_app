@@ -1,4 +1,4 @@
-export const API_URL = "https://azuretest-sn.azurewebsites.net";
+export const API_URL = "https://meddy-node.azurewebsites.net";
 
 /**
  * Sends a POST request to the backend to get a response from the AI.
