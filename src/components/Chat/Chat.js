@@ -19,7 +19,7 @@ import {
   // Close as CloseIcon,
   Delete as DeleteIcon,
 } from "@mui/icons-material";
-import { GoLaw } from "react-icons/go";
+import { FaBriefcaseMedical } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { getAIResponse } from "../../utils";
@@ -41,19 +41,19 @@ const Chat = () => {
   const sampleQuestions = [
     {
       text: "Medicine for fever",
-      icon: <GoLaw className="sample-question-icon" />,
+      icon: <FaBriefcaseMedical className="sample-question-icon" />,
     },
     {
       text: "Home remedies for cold",
-      icon: <GoLaw className="sample-question-icon" />,
+      icon: <FaBriefcaseMedical className="sample-question-icon" />,
     },
     {
       text: "Explain the benefits of exercise for mental health.",
-      icon: <GoLaw className="sample-question-icon" />,
+      icon: <FaBriefcaseMedical className="sample-question-icon" />,
     },
     {
       text: "What are the symptoms of heart disease",
-      icon: <GoLaw className="sample-question-icon" />,
+      icon: <FaBriefcaseMedical className="sample-question-icon" />,
     },
   ];
 
