@@ -8,7 +8,7 @@ const HomePage = () => {
         {/* Add your animation here */}
         <img
           src={
-            "https://test.digitalt3.com/wp-content/uploads/2024/08/Medi-ai-icon-1.png"
+            "https://digitalt3.com/wp-content/uploads/2024/08/Medi-ai-icon-1.png"
           }
           alt="Meddy AI"
           className="logo"
